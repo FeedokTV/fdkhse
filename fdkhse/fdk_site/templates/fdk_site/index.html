@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <html lang="ru">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FDKHSE</title>
+    <link type="text/css" href="{% static 'fdk_site/css/style.css' %}" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+    </style>
+    <script src="{% static 'fdk_site/js/three.js' %}"></script>
+  </head>
+<body>
+    <div class="nav"> 
+        <div class="nav-bar">
+            <div class="nav-name">FEEDOK</div>
+            <div class="nav-elem home" data-id="home">ГЛАВНАЯ</div>
+            <div class="nav-elem projects" data-id="projects">ПОРТФОЛИО</div>
+            <div class="nav-elem games" data-id="games">ИГРЫ</div>
+            <div class="nav-elem about" data-id="about">ОБО МНЕ</div>
+        </div>
+    </div>
+    <div class="main">
+        <div id="main-render">
+            <script src="{% static 'fdk_site/js/OrbitControls.js' %}"></script>
+            <script src="{% static 'fdk_site/js/renderer.js' %}"></script>
+        </div>
+        <div class="main-content">
+            <div class="content-projects">
+                <div style="width: 200px; height: 200px; background-color: fuchsia;"></div>    
+            </div>
+            <div class="content-games"></div>
+            <div class="content-about">
+                <div style="width: 200px; height: 200px; background-color: aqua;"></div>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{% static 'fdk_site/js/app.js' %}"></script>
+    </html>
+</body>

@@ -1,0 +1,244 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&family=Zen+Kurenaido&display=swap');
+* {
+    box-sizing: border-box;
+    hyphens: auto;
+    -webkit-hyphenate-limit-before: 3;
+    -webkit-hyphenate-limit-after: 2;
+  }
+
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow:hidden;
+  }
+
+.body {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 50px;
+    
+    background-color: black;
+}
+
+
+/*    NAVIGATION BAR    */
+
+.nav{
+    float: right;
+    height: 100%;
+    width: 30%;
+    display: block;
+    background-color: black;
+    text-align: center;
+    position: relative;
+    
+}
+
+.nav-bar {
+    height: 20%;
+    margin: 0px auto;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    font-family: 'Oswald', sans-serif;
+}
+
+.nav-name {
+    color: white;
+}
+
+.nav-name {
+    font-size: 45px;
+    padding-bottom: 5px;
+    opacity: 0;
+}
+
+
+.nav-elem {
+    width: 100%;
+    font-size: 30px;
+    color: white;
+    opacity: 0;
+
+
+    transition: ease-in 0.1s;
+}
+
+.nav-elem:hover {
+    color: grey; 
+    cursor: pointer;
+}
+
+/*    MAIN CONTENT    */
+
+.main {
+    width: 70%;
+    height: 100%;
+    float: left;
+    box-shadow: inset 0 0 100px black;
+    background-color: rgb(15, 15, 15);
+    overflow: hidden;
+}
+
+#main-render {
+    box-shadow: inset 0 0 100px black;
+    background-color: rgb(15, 15, 15);
+    width: 100%;
+    height: 100%;
+    opacity: 100;
+}
+
+#main-render:hover {
+    cursor:grab;
+}
+
+.main-content {
+    width: 100%;
+    height: 100%;
+    display: none;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    white-space: nowrap;
+    scrollbar-width: none;
+    box-shadow: inset 0 0 100px black;
+    background-color: rgb(15, 15, 15);
+    opacity: 1;
+}
+
+.main-content::-webkit-scrollbar{
+    width: 0
+}
+
+.main-content {width:-moz-scrollbars-none; }
+
+.content-projects {
+    width: 100%;
+    height: 100%;
+    display: none;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    white-space: nowrap;
+    scrollbar-width: none;
+    opacity: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+
+.content-games { 
+    width: 100%;
+    height: 100%;
+    display: none;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    white-space: nowrap;
+    scrollbar-width: none;
+    opacity: 0;
+}
+
+.content-about { 
+    width: 100%;
+    height: 100%;
+    display: none;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    white-space: nowrap;
+    scrollbar-width: none;
+    opacity: 0;
+    color:rgb(247, 247, 247);
+    margin-top: 10px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.content-about p{ 
+    font-size: 15px;
+}
+
+.project-cardwrapper {
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    position: relative;
+    color: white;
+    display: flex;
+    grid-template-columns: 0;
+    perspective: 1000px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+    
+}
+
+
+.project-card-front, .project-card-back{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    overflow:hidden;
+    border-width:1;
+    border-color: rgb(190,190,190);
+    border-style: solid;
+    border-radius: 10px;
+    left: 0;
+    top: 0;
+    backface-visibility: hidden;
+    transition: 1s;
+    display: block;
+
+}
+
+.project-card-back a {
+    margin: 50px;
+}
+
+.project-card-back {
+    display:block;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.project-cardwrapper:hover .project-card-front{ transform: rotateY(180deg);}
+.project-cardwrapper:hover .project-card-back{ transform: rotateY(360deg);}
+
+.card-img {
+    width: 150px;
+    height: 150px;
+    margin-top: 50px;
+    margin-left: 66px;
+}
+
+
+.about-img {
+    width: auto;
+    height: 300px;
+    padding-left: 10px;
+    margin-right: 10px;
+    float: left;
+}
+
+p {
+    word-wrap: normal;
+    line-break: auto;
+    font-size: 20px;
+    margin-bottom: 3px;
+    margin-block: 0px;
+    
+}
+
+a { 
+    color: rgb(160, 160, 160);
+    text-decoration: none;
+    transition: ease-in 0.1s;
+}
+
+a:hover {
+    color: rgb(200, 200, 200);
+}
