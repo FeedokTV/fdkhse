@@ -21,7 +21,7 @@ html, body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 50px 50px;
-    
+    flex-wrap:wrap
     background-color: black;
 }
 
@@ -132,37 +132,6 @@ html, body {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-
-
-.content-games { 
-    width: 100%;
-    height: 100%;
-    display: none;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    white-space: nowrap;
-    scrollbar-width: none;
-    opacity: 0;
-}
-
-.content-about { 
-    width: 100%;
-    height: 100%;
-    display: none;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    white-space: nowrap;
-    scrollbar-width: none;
-    opacity: 0;
-    color:rgb(247, 247, 247);
-    margin-top: 10px;
-    font-family: 'Oswald', sans-serif;
-}
-
-.content-about p{ 
-    font-size: 15px;
-}
-
 .project-cardwrapper {
     width: 300px;
     height: 300px;
@@ -174,7 +143,7 @@ html, body {
     perspective: 1000px;
     font-family: 'Oswald', sans-serif;
     font-weight: 200;
-    
+
 }
 
 
@@ -195,6 +164,9 @@ html, body {
 
 }
 
+.project-card-front {
+padding: 65px;}
+
 .project-card-back a {
     margin: 50px;
 }
@@ -213,6 +185,45 @@ html, body {
     height: 150px;
     margin-top: 50px;
     margin-left: 66px;
+}
+
+.project-text {
+    hyphens: none;
+    white-space: normal;
+}
+
+
+.content-games { 
+    width: 100%;
+    height: 100%;
+    display: none;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    white-space: nowrap;
+    scrollbar-width: none;
+    opacity: 0;
+}
+
+.content-about { 
+    width: 100%;
+    height: 100%;
+    padding-right: 10px;
+    display: none;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    white-space: nowrap;
+    scrollbar-width: none;
+    opacity: 0;
+    color:rgb(247, 247, 247);
+    margin-top: 10px;
+    font-family: 'Oswald', sans-serif;
+    hyphens: none;
+    white-space: normal;
+}
+
+.about-text {
+    hyphens: none;
+    white-space: normal;
 }
 
 
@@ -241,4 +252,74 @@ a {
 
 a:hover {
     color: rgb(200, 200, 200);
+}
+
+
+/* Media requests. Making some adaptive thing */
+
+@media only screen and (max-width: 1200px) {
+
+}
+
+@media only screen and (max-width: 992px) {
+    color: red;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+}
+
+@media only screen and (max-width: 480px) {
+    .nav {
+        float: right;
+        height: 6%;
+        width: 100%;
+        display: block;
+        background-color: black;
+        text-align: center;
+        position: sticky;
+        display: flex;
+        border-bottom: 2px solid #ccc;
+        min-height: 50px;
+    }
+
+    .nav-bar{
+        display: flex;
+        margin-inline: 20px;
+        height: auto;
+        margin-top: 10px;
+    }
+
+
+    .nav-name {
+        display: none;
+    }
+
+    .nav-elem {
+        font-size: 21px;
+    }
+
+    .main {
+        width: 100%;
+        height: 100%;
+        float: left;
+        box-shadow: inset 0 0 100px black;
+        background-color: rgb(15, 15, 15);
+        overflow: hidden;
+    }
+
+    .projects-main {
+        display:flex;
+        justify-content: center;
+    }
+
+    .about-main {
+        display: grid;
+    }
+
+    .about-text {
+        hyphens: auto;
+        white-space: normal;
+    }
 }

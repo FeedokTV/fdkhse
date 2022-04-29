@@ -13,13 +13,16 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 
 from fdk_site.views import index, pageNotFound
 
 urlpatterns = [
-    path('', index, name='home')
+    path('', index, name='home'),
+    path('no/', pageNotFound, name='404')
 ]
 
-handler404 = pageNotFound
+#handler404 = pageNotFound

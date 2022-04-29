@@ -1,0 +1,27 @@
+@media only screen and (max-width: 1200px) {
+
+}
+
+@media only screen and (max-width: 992px) {
+    color: red;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-elem {
+    width: 100%;
+    font-size: 30px;
+    color: red;
+    opacity: 0;
+    transition: ease-in 0.1s;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .nav-elem {
+    width: 100%;
+    font-size: 30px;
+    color: red;
+    opacity: 0;
+    transition: ease-in 0.1s;
+    }
+}

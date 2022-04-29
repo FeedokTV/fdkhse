@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>FDKHSE</title>
     <link type="text/css" href="{% static 'fdk_site/css/style.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'fdk_site/css/adaptive.css' %}">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
     </style>
@@ -17,7 +18,7 @@
             <div class="nav-name">FEEDOK</div>
             <div class="nav-elem home" data-id="home">ГЛАВНАЯ</div>
             <div class="nav-elem projects" data-id="projects">ПОРТФОЛИО</div>
-            <div class="nav-elem games" data-id="games">ИГРЫ</div>
+
             <div class="nav-elem about" data-id="about">ОБО МНЕ</div>
         </div>
     </div>
@@ -28,11 +29,49 @@
         </div>
         <div class="main-content">
             <div class="content-projects">
-                <div style="width: 200px; height: 200px; background-color: fuchsia;"></div>    
+                <div class="projects-main">
+                    <div class="project-cardwrapper">
+                        <div class="project-card-front">
+                            <img  style="width: 150px" src="{% static 'fdk_site/images/infinity1.png' %}">
+                        </div>
+                        <div class="project-card-back">
+                            <p>Infinity Project</p>
+                            <div class="project-text">Проект серверов Minecraft, особенность которого заключается в технической
+                            новизне и отсутствие системы покупок предметов за деньги,делая всех игроков равными</div>
+                            <a href="https://github.com/FeedokTV" style="margin-right: 5px;">Сайт</a>
+                            <a href="https://vk.com/greenfeed_tm" style="margin-right: 5px;">VK</a>
+                            <a href="https://t.me/feedoktv">Discord</a></p>
+                        </div>
+                    </div>
+                    <div class="project-cardwrapper">
+                        <div class="project-card-front">
+                            <img  style="width: 150px" src="{% static 'fdk_site/images/telegram.png' %}">
+                        </div>
+                        <div class="project-card-back">
+                            <p>Telegram бот</p>
+                            <div class="project-text">Пример на бота</div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="content-games"></div>
             <div class="content-about">
-                <div style="width: 200px; height: 200px; background-color: aqua;"></div>
+                <div class="about-main">
+                    <p style="font-size: 35px; margin-bottom: 10px;"><img class='about-img' src="{% static 'fdk_site/images/me.png' %}">Vladimir Gursky</p>
+                    <div clas="about-text">
+                        Рад вас поприветсвовать на своей персональной странице.
+                        Как вы могли догадаться меня зовут Владимир (aka Feedok).
+                        Основной мой вид деятельности заключается в разработке софта и различных систем.
+                        Подобных примеров достаточно много, однако ознакомиться с ними ты сможешь на вкладке портфолио.
+                        Помимо этого я выполняю курсовые и лабараторные работы на заказ.
+                        Вдобавок, моё свободное время я уделяю разработке игр и монтажу видео.
+                        Эти сферы деятельности для меня давно стали любимыми, каждый день я стараюсь совершенствоваться.
+                        Надеюсь вам понравился мой маленький уголок в большой сети интернет <3</div>
+                    <p><a href="https://github.com/FeedokTV" style="margin-right: 5px;">Github</a>
+                        <a href="https://vk.com/greenfeed_tm" style="margin-right: 5px;">VK</a>
+                        <a href="https://t.me/feedoktv">Telegram</a></p>
+
+                </div>
             </div>
 
         </div>
