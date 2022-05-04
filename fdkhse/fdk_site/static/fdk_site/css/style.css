@@ -132,6 +132,12 @@ html, body {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+.projects-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
 .project-cardwrapper {
     width: 300px;
     height: 300px;
@@ -301,17 +307,23 @@ a:hover {
 
 /* Media requests. Making some adaptive thing */
 
-@media only screen and (max-width: 1200px) {
 
+@media only screen and (max-width: 630px) {
+    .projects-main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
 }
 
-@media only screen and (max-width: 992px) {
-    color: red;
-}
 
+@media only screen and (max-width: 1310px) {
 
-@media only screen and (max-width: 768px) {
-
+    .projects-main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -353,10 +365,17 @@ a:hover {
         overflow: hidden;
     }
 
-    .projects-main {
-        display:flex;
+    .content-projects {
+        display: flex;
         justify-content: center;
     }
+
+    .projects-main {
+        display:grid;
+        justify-content: center;
+        grid-template-columns: 1fr;
+    }
+
 
     .about-main {
         display: grid;
