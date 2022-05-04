@@ -224,8 +224,52 @@ padding: 65px;}
 .about-text {
     hyphens: none;
     white-space: normal;
+    margin-bottom: 70px;
 }
 
+.about-stack {
+    margin: 8px;
+}
+
+.about-stackbutton {
+    border-radius: 7px;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    padding: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-left: -1px;
+    margin-right: 13px;
+
+    transition: ease-in 0.1s;
+}
+
+.about-stackbutton:hover {
+    border-radius: 7px;
+    border: 2px solid white;
+    background-color: white;
+    color: black;
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+    padding: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-left: -1px;
+    margin-right: 13px;
+}
 
 .about-img {
     width: auto;
@@ -321,5 +365,6 @@ a:hover {
     .about-text {
         hyphens: auto;
         white-space: normal;
+        margin-bottom: 10px
     }
 }
